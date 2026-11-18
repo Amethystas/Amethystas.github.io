@@ -1,0 +1,34 @@
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: #f5f5f5; font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif; }
+#app { height: 100dvh; display: flex; }
+#catalog { width: 112px; flex-shrink: 0; overflow-y: auto; border-right: 1px solid #ddd; background: #fafafa; padding: 12px 8px; }
+#catalog p { margin: 0 8px 10px; color: #777; font-size: 12px; }
+#entries { display: flex; flex-direction: column; gap: 3px; }
+#entries button { border-color: transparent; background: transparent; text-align: left; padding: 7px 10px; }
+#entries button[aria-current='true'] { border-color: #aaa; background: #e8e8e8; }
+#workspace { display: flex; position: relative; flex: 1; min-width: 0; }
+main { position: relative; flex: 1; min-width: 0; overflow: hidden; }
+#canvas, #lines { position: absolute; inset: 0; }
+#canvas canvas { display: block; }
+#lines { pointer-events: none; }
+#lines svg { display: block; }
+#lines.fallback { display: grid; place-items: center; padding: 8%; }
+#lines.fallback svg { width: 100%; height: 100%; }
+#model-title { position: absolute; top: 16px; left: 18px; margin: 0; color: #777; font-size: 12px; pointer-events: none; }
+nav { display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 20px; }
+button { font: inherit; font-size: 14px; padding: 8px 15px; color: #333; background: #fff; border: 1px solid #bbb; border-radius: 2px; cursor: pointer; white-space: nowrap; }
+button:hover { background: #eee !important; }
+button[aria-pressed='true'] { background: #e5e5e5; border-color: #777; }
+button:focus-visible { outline: 2px solid #555; outline-offset: 2px; }
+button:disabled { opacity: .4; cursor: default; }
+#toggle-reference { margin-top: 14px; }
+#notice { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; max-width: 85%; font-size: 13px; color: #666; overflow-wrap: anywhere; }
+#reference { width: min(43vw, 640px); min-width: 260px; display: flex; flex-direction: column; background: #fff; border-left: 1px solid #ddd; }
+.reference-tabs { display: flex; gap: 8px; padding: 12px; }
+.reference-tabs button { padding: 5px 12px; font-size: 12px; }
+#close-reference { margin-left: auto; }
+.reference-image { flex: 1; min-height: 0; padding: 12px; overflow: auto; display: grid; place-items: center; }
+.reference-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
+@media (max-width: 900px) { #reference { position: absolute; inset: 0; z-index: 2; width: 100%; min-width: 0; border: 0; } }
+@media (max-width: 600px) { #catalog { width: 82px; padding: 10px 4px; } #entries button { font-size: 12px; padding: 7px; } nav { padding: 8px; gap: 10px; } button { font-size: 12px; padding: 7px 9px; } #model-title { top: 10px; left: 10px; font-size: 11px; } }
