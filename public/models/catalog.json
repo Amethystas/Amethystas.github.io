@@ -653,7 +653,7 @@
     },
     {
       "id": "22a_1",
-      "version": "43ecd3e442fb4168",
+      "version": "d4db3afa18b57705",
       "glb": "models/22a_1/model.glb",
       "edges": "models/22a_1/edges.json",
       "deflectionMM": 0.002,
@@ -2111,7 +2111,7 @@
     },
     {
       "id": "24a_5",
-      "version": "6763b68151d46c55",
+      "version": "19a0252279f2c515",
       "glb": "models/24a_5/model.glb",
       "edges": "models/24a_5/edges.json",
       "deflectionMM": 0.002,
